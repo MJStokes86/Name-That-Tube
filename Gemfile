@@ -33,7 +33,7 @@ gem 'heroku'
 gem 'bootstrap_form'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 # gem 'formtastic', '~> 3.0'
 
 # Use Capistrano for deployment

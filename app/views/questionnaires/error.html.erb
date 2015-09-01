@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'> 
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="refresh" content="3;url=/categories" />
+
+<style>
+body {
+	background:url(asset_path('statictv.mp4')) no-repeat;
+	-webkit-background-size:cover;
+	overflow:hidden;
+	height:100%;
+	width:100%;
+}
+
+video#bgvid{
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	margin:auto;
+	position:absolute;
+}
+
+.user-name , .log-out {
+	display: none;
+}
+
+#error {
+	color:red;
+	background-color: black;
+	padding:100px;
+	opacity:0.9;
+	font-family:'Russo One', sans-serif;
+}
+
+.container {
+	position: absolute;
+	top:10em;
+	left:10%;
+}
+
+
+</style>
+	<title>Name That Tube</title>
+	 <link href='http://fonts.googleapis.com/css?family=Russo+One|Audiowide' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<video id='bgvid' autoplay loop muted>
+
+<source src='/assets/statictv.mp4' type='video/mp4'>
+<sourve src='/assets/statictv.ogv' type='video/ogg'>
+<source src='/assets/statictv.webm' type='video/webm'>
+
+</video>
+
+<div class='container'>
+
+<center>
+
+<h1 id='error'>Wrong! <br><br> The correct answer was <br><br><span style='color:green'><%= @correct_answer %></span></h1>
+
+</center>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+

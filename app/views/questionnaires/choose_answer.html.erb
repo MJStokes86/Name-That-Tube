@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+	background-color: #1A1D1F;
+}
+
+.btn:hover{
+	color: white;
+	background-color:black;
+}
+
+ .log-out {
+	display: none;
+}
+</style>
+
+	<title>Name That Tube</title>
+	
+</head>
+<body>
+<center>
+
+<img src = 'http://i.imgur.com/ecgLd0Y.png' height="200" width="500" />
+
+
+<form id='form' action = '/results/<%=@question.id%>' method = 'post'>
+
+<% @choices.each do |choice| %>
+
+
+<br>
+<br>
+<br>
+<div class="form-group">
+<div class = 'radio'>
+
+<input type = 'hidden' name ='q_id' value ='<%=@question.id%>'>
+
+
+
+<!-- <label><input class= 'radio_button' type='radio' name='choice' value='<%= choice %>' style='vertical-align: middle; margin:0px;'><%=choice%></label>
+ -->
+<input  class="btn btn-default btn-block" type='submit' name='choice' value='<%= choice %>' style='vertical-align: middle; margin:0px;'>
+
+
+
+
+</div>
+</div>
+<%end%>
+<br>
+<br>
+<br>
+<br>
+<!-- <input type='submit' class="btn btn-default btn-lg" value = 'Submit Answer'></input> -->
+ <!--I changed the button into an input that gave 'choice' as a param
+<!--'input' type submit makes an actual button to submit things -->
+</form>
+</div>
+</center>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Name That Tube</title>
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body {
+	background:url(asset_path('multimediawall.mp4')) no-repeat;
+	-webkit-background-size:cover;
+	overflow:hidden;
+	height:100%;
+	width:100%;
+}
+
+video#bgvid {
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	margin:auto;
+	position:absolute;
+}
+
+
+.container {
+
+	position: absolute;
+	top:7em;
+	left:10%;
+}
+
+</style>
+
+<script type="text/javascript">
+	
+	$(function(){
+
+ 		$('body').css('display', 'none');
+		$('body').fadeIn(1000);
+		
+
+
+
+		$('#start').click(function(){
+			event.preventDefault();
+			
+
+			$('body').fadeOut(1000, newpage);
+
+
+		})
+
+		function newpage() {
+			window.location = '/login'
+		}
+
+	});
+</script>
+
+</head>
+<body>
+
+<video id='bgvid' class='bgvid' autoplay loop muted>
+
+<source src='/assets/multimediawall.mp4' type="video/mp4" />
+<source src='/assets/multimediawall.ogv' type="video/ogg" />
+<source src+'/assets/multimediawall.webm' type="video/webm" />
+</video>
+
+<div class='container'>
+<div class='row'>
+<center>
+
+<img src="http://i.imgur.com/ecgLd0Y.png" height="200" width="500" />
+
+<br>
+<br>
+<br>
+<br>
+
+<form action='/login' method="GET">
+<button class='btn btn-default btn-lg btn-submit' id='start'> Start Game </button>
+</form>
+</center>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<style>
+body {
+	background-color: #1A1D1F;
+}
+
+h1 {
+	color: white;
+	font-family: 'Russo One', sans-serif;
+}
+
+.log-out {
+	display: none;
+}
+
+
+</style>
+	<title>Name That Tube</title>
+		 <link href='http://fonts.googleapis.com/css?family=Russo+One|Audiowide' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<center>
+<img src = 'http://i.imgur.com/ecgLd0Y.png' height="200" width="500" />
+
+</center>
+
+
+
+<center>
+
+
+<br>
+<br>
+<h1><%=@question.question%></h1>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<form action = '/categories/<%=@category.id%>/video_clues/<%=@videos.id%>' >
+<button id="idj-play-button" class="btn btn-lg"><i class="glyphicon glyphicon-play"></i></button>
+</form>
+
+</center>
+
+</body>
+</html>
+
+
+
+

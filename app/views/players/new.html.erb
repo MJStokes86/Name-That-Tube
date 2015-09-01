@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+body {
+	background-color: #1A1D1F;
+
+}
+
+label {
+	color: white;
+}
+
+h2 {
+	color: white;
+	font-family: 'Russo One', sans-serif;
+}
+
+h4 {
+	color: red;
+}
+
+
+</style>
+
+	<title>NameThatTube</title>
+
+
+		 <link href='http://fonts.googleapis.com/css?family=Russo+One|Audiowide' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<center>
+
+<img src = 'http://i.imgur.com/ecgLd0Y.png' height="200" width="500" />
+
+<h2>Sign up today and join the video challenge!</h2>
+<br>
+<br>
+
+<% if @player.errors.count > 0 %>
+
+<% @player.errors.full_messages.each do |msg| %>
+<h4><%= msg.upcase %></h4>
+<% end %>
+<% end %>
+
+<br>
+<br>
+<div class = 'container'>
+<%= form_tag '/signup', method: 'post', :class => 'form-inline' do  %>
+
+<div class = 'form-group'>
+<%= label_tag 'user_name', "Username"%><br>
+<%= text_field_tag :user_name,params[:user_name], class: 'form-control', autofocus: true %>
+</div>
+<br>
+<br>
+<div class = 'form-group'>
+<%=label_tag 'password', "Password" %><br>
+<%= password_field_tag :password, params[:password], class: 'form-control', autofocus: true %>
+</div>
+<br>
+<br>
+<div class='form-group'>
+<%=label_tag 'password_confirmation',"Retype Password" %><br>
+<%=password_field_tag :password_confirmation, params[:password_confirmation], class: 'form-control', autofocus: true%>
+</div>
+<br>
+<br>
+
+<%= submit_tag "Join!", class: 'btn btn-default btn-lg btn-submit' %>
+<%= link_to "Cancel" , '/login', class: 'btn btn-default btn-lg'%>
+
+<%end%>
+</div>
+
+
+</center>
+
+
+</body>
+</html>
+
+
+
+

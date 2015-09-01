@@ -32,6 +32,8 @@ gem 'heroku'
 
 gem 'bootstrap_form'
 
+gem  'bootstrap-glyphicons' 
+
 # Use Unicorn as the app server
 gem 'unicorn'
 # gem 'formtastic', '~> 3.0'

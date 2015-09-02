@@ -36,6 +36,8 @@ gem  'bootstrap-glyphicons'
 
 gem 'bootstrap-sass'
 
+gem 'twitter-bootstrap-rails'
+
 # Use Unicorn as the app server
 gem 'unicorn'
 # gem 'formtastic', '~> 3.0'

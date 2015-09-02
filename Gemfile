@@ -34,6 +34,8 @@ gem 'bootstrap_form'
 
 gem  'bootstrap-glyphicons' 
 
+gem 'bootstrap-sass'
+
 # Use Unicorn as the app server
 gem 'unicorn'
 # gem 'formtastic', '~> 3.0'

@@ -5,4 +5,8 @@ class Player < ActiveRecord::Base
 		self.admin == 'admin'
 	end
 
+	def player
+		[user_name, password].join " "
+	end
+
 end

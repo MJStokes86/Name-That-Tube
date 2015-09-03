@@ -37,7 +37,6 @@ gem  'bootstrap-glyphicons'
 gem 'bootstrap-sass'
 
 gem 'twitter-bootstrap-rails'
-
 # Use Unicorn as the app server
 gem 'unicorn'
 # gem 'formtastic', '~> 3.0'
@@ -58,6 +57,18 @@ group :development, :test do
   gem 'spring'
 
   gem 'pry-rails'
+
+  gem 'rspec-rails', '~> 3.0'
+
+  gem 'factory_girl_rails', :require => false
+
+  gem 'capybara'
+
+  gem 'faker'
+
+  gem 'launchy'
+
+  gem 'guard-rspec'
   
 end
 

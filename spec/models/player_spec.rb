@@ -1,8 +1,8 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Player do
+describe :player do
 	it "has a valid factory" do
-		FactoryGirl.create(:player).should be_valid
+      FactoryGirl.create(:player).should be_valid
 	end
   it "is invalid without a user_name" do
   		FactoryGirl.build(:player, :user_name => nil).should be_valid

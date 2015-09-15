@@ -279,7 +279,7 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.1.0)
-  factory_girl_rails
+  factory_girl_rails (~> 4.0)
   faker
   guard-rspec
   heroku
@@ -299,3 +299,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.10.6

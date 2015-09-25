@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150902171933) do
+ActiveRecord::Schema.define(version: 20150924214647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.integer  "question_id"
+    t.string   "text"
+    t.boolean  "correct"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -38,27 +48,23 @@ ActiveRecord::Schema.define(version: 20150902171933) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "questionnaires", force: :cascade do |t|
-    t.string   "question"
-    t.string   "choices"
-    t.string   "correct_answer"
+  create_table "questions", force: :cascade do |t|
     t.integer  "category_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
-  create_table "video_clues", force: :cascade do |t|
-    t.string   "name"
-    t.text     "video_url"
-    t.integer  "question_id"
+    t.string   "question"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
-  create_table "widgets", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  add_index "questions", ["category_id"], name: "index_questions_on_category_id", using: :btree
+
+  create_table "video_clues", force: :cascade do |t|
+    t.integer  "question_id"
+    t.string   "youtube_id"
+    t.integer  "time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
+
+  add_index "video_clues", ["question_id"], name: "index_video_clues_on_question_id", using: :btree
 
 end

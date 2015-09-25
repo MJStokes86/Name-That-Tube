@@ -11,7 +11,7 @@ body {
 	left:0%;
 }
 
-.user-name , .log-out {
+.user-name , .log-out , .score{
 	display: none;
 }
 
@@ -28,7 +28,7 @@ $(function(){
 </script>.
 
 
-<meta http-equiv="refresh" content="3;url=/choose_answer/<%=@video.id%>" />
+<meta http-equiv="refresh" content="3;url=<%=answer_question_path(@question) %>" />
 <!--<%=@video.id%> is a param! That's what params[:id] is!-->
 
 <center>
@@ -39,7 +39,7 @@ $(function(){
 <br>
 <br>
 
-<%=@videos%>
+<%=@videos.html_safe%>
 
 </center>
 

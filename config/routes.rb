@@ -8,15 +8,20 @@ Rails.application.routes.draw do
 # root 'categories#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-resources :categories do
+# resources :categories 
 
-resources :questionnaires
+get "/categories" => "categories#index", as: :categories
+get "/category/:id" => "categories#show", as: :category
+get "/questions/:id/clue" => "questions#video_clue", as: :clue
+post "/questions/:id/clue" => "questions#video_clue"
+get "/questions/:id/answer" => "questions#answer", as: :answer_question
+get "/questions/:id/results" => "questions#validate_answer", as: :results
+post "/questions/:id/results" => "questions#validate_answer"
 
-resources :video_clues
+resources :admin 
 
 
 
-end
 
 get '/signup' => 'players#new'
 post 'signup' => 'players#create'
@@ -29,11 +34,11 @@ post 'login' => 'sessions#create'
 delete 'logout' => 'sessions#destroy'
 
 
-get '/choose_answer/:id', :to => "questionnaires#choose_answer"
+# get '/choose_answer/:id', :to => "questionnaires#choose_answer"
 #The route method to link to a specific html file inside a controller
 
 # get 'categeories/:id/choose_answer' => "questionnaires#choose_answer"
-post '/results/:id', :to => "questionnaires#results"
+# post '/results/:id', :to => "questionnaires#results"
 
 
 

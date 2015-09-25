@@ -6,14 +6,13 @@ class CategoriesController < ApplicationController
 		@categories=Category.all
 		###It shows a list of all the categories
 		# binding.pry
-	
-		
-		
 		render :index
 	end
 
-	# def show
-		
-	# end
+	def show
+		@category = Category.find(params[:id])
+		@question = @category.questions.random
+		@video = @question.video_clue
+	end
 	
 end

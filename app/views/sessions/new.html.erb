@@ -23,6 +23,10 @@ h2 {
 	font-family:'Russo One' sans-serif;
 }
 
+.sessionH3 a {
+	color:white;
+}
+
 h3 a{
 	position:fixed;
 	top: 30px;
@@ -159,7 +163,7 @@ a:hover{
 <%= submit_tag "Let's Play!", class: 'btn btn-default btn-lg btn-submit', id: 'play' %>
 <br>
 <br>
-<h3><%= link_to 'Sign Up', {:controller => 'players', :action => 'new'} %></a></h3>
+<h3 class='sessionH3'><%= link_to 'Sign Up', {:controller => 'players', :action => 'new'} %></a></h3>
 <% end %>
 </div>
 </div>

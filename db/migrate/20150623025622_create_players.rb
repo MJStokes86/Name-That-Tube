@@ -4,7 +4,7 @@ class CreatePlayers < ActiveRecord::Migration
       t.string :user_name
       t.string :password_digest
       t.integer :score
-      t,string :role
+      t.string :role
 
       t.timestamps null: false
     end

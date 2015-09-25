@@ -18,3 +18,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
  
+ body, html {
+ 	background-color: #1A1D1F;
+ 	font-family: Impact;
+ }
+
+ h1,h2,h3,h4,a,p {
+ 	color:white;
+ 	font-family: Impact;
+ }
+
+ .btn.btn-default.btn-block:hover {
+ 	background-color:black;
+ 	color:white;
+ }
+

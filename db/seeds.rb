@@ -16,6 +16,7 @@ Answer.delete_all
 Player.create({user_name:'caddyshack3', score: 0, password_digest: BCrypt::Password.create('corinacorina')})
 Player.create({user_name:'maryjane9', score: 0, password_digest: BCrypt::Password.create('nicety')})
 Player.create({user_name:'mjstokes86', score: 0, password_digest: BCrypt::Password.create('mjs242630135'), role:'admin'})
+Player.create({user_name:'Guest', score: 0, password_digest: BCrypt::Password.create('12345')})
 
 %W(Music TV Movies Games).each do |name|
 	Category.create name: name

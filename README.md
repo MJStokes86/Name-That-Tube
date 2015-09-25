@@ -14,7 +14,7 @@ If the player guesses the correct answer will earn points and continue on.
 
 <h1> ERD </h1>
 
-![alt tag](https://raw.githubusercontent.com/MJStokes86/Project-4-Name_That_Tube/master/images/Project%204%20ERD.png)
+![alt tag](https://raw.githubusercontent.com/MJStokes86/Name-That-Tube/master/images/Name%20That%20Tube%20ERD.png)
 
 <h1> Wireframes </h1>
 <center>

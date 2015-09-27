@@ -80,6 +80,26 @@ a:hover{
 	}
 }
 
+@media screen and (max-device-width: 480px){
+
+	.container{
+		height:100px;
+		width:250px;
+		position: absolute;
+		height:auto;
+		top:5em;
+
+	}
+
+	.container img{
+		height:100px;
+		width:250px;
+	}
+
+	
+	
+}
+
 
 
 </style>
@@ -163,7 +183,7 @@ a:hover{
 <%= submit_tag "Let's Play!", class: 'btn btn-default btn-lg btn-submit', id: 'play' %>
 <br>
 <br>
-<h3 class='sessionH3'><%= link_to 'Sign Up', {:controller => 'players', :action => 'new'} %></a></h3>
+<h3 class='sessionH3'><%= link_to 'Sign Up', {:controller => 'players', :action => 'new'}%></h3>
 <% end %>
 </div>
 </div>

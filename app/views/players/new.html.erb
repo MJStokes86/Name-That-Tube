@@ -23,6 +23,25 @@ h4 {
 	color: red;
 }
 
+@media only screen and (max-device-width: 480px) {
+
+	.logo {
+		height:100px;
+		width: 250px;
+	}
+	.sign-up{
+		font-size: 1em;
+	}
+
+	.container {
+		position:relative;
+		top:-5em;
+		height:100px;
+		width:200px;
+		
+	}
+}
+
 
 </style>
 
@@ -35,9 +54,9 @@ h4 {
 <body>
 <center>
 
-<img src = 'http://i.imgur.com/ecgLd0Y.png' height="200" width="500" />
+<img class='logo' src = 'http://i.imgur.com/ecgLd0Y.png' height="200" width="500" />
 
-<h2>Sign up today and join the video challenge!</h2>
+<h2 class='sign-up'>Sign up today and join the video challenge!</h2>
 <br>
 <br>
 

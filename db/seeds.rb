@@ -142,7 +142,7 @@ VideoClue.create question_id: 10, youtube_id: "-gzg3UqaBEU", time: 120
 VideoClue.create question_id: 11, youtube_id: "YQL-B3PNkeI", time: 69
 VideoClue.create question_id: 12, youtube_id: "yNSWJ-RtqEc", time: 17
 VideoClue.create question_id: 13, youtube_id: "ayCPd_0Y8e0", time: 318 
-VideoClue.create question_id: 14, youtube_id: "iO2SirSH7Rg", time: 3
+VideoClue.create question_id: 14, youtube_id: "iO2SirSH7Rg", time: 12
 VideoClue.create question_id: 15, youtube_id: "oAb2_-uv41Y", time: 47
 VideoClue.create question_id: 16, youtube_id: "wM6exo00T5I", time: 135
 VideoClue.create question_id: 17, youtube_id: "qi1f2ADQYzA", time: 41

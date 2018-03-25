@@ -129,7 +129,7 @@ q.answers.create text: 'Rush 2049', correct: true
 
 
 
-VideoClue.create question_id: 1, youtube_id: "ZPEwluSNzgc", time: 80
+VideoClue.create question_id: 1, youtube_id: "QhOVjg01Y7k", time: 19
 VideoClue.create question_id: 2, youtube_id: "SR6iYWJxHqs", time: 160
 VideoClue.create question_id: 3, youtube_id: "FFO7sfGc0Ok", time: 252
 VideoClue.create question_id: 4, youtube_id: "5c8wvxAqQts", time: 50

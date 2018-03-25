@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -22,9 +21,8 @@ ActiveRecord::Schema.define(version: 20150924214647) do
     t.boolean  "correct"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["question_id"], name: "index_answers_on_question_id", using: :btree
   end
-
-  add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -53,9 +51,8 @@ ActiveRecord::Schema.define(version: 20150924214647) do
     t.string   "question"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_questions_on_category_id", using: :btree
   end
-
-  add_index "questions", ["category_id"], name: "index_questions_on_category_id", using: :btree
 
   create_table "video_clues", force: :cascade do |t|
     t.integer  "question_id"
@@ -63,8 +60,7 @@ ActiveRecord::Schema.define(version: 20150924214647) do
     t.integer  "time"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["question_id"], name: "index_video_clues_on_question_id", using: :btree
   end
-
-  add_index "video_clues", ["question_id"], name: "index_video_clues_on_question_id", using: :btree
 
 end

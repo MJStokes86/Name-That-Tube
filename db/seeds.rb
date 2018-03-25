@@ -132,7 +132,7 @@ q.answers.create text: 'Rush 2049', correct: true
 VideoClue.create question_id: 1, youtube_id: "ZPEwluSNzgc", time: 80
 VideoClue.create question_id: 2, youtube_id: "SR6iYWJxHqs", time: 160
 VideoClue.create question_id: 3, youtube_id: "FFO7sfGc0Ok", time: 252
-VideoClue.create question_id: 4, youtube_id: "ZiRHu1JjpI0", time: 192
+VideoClue.create question_id: 4, youtube_id: "5c8wvxAqQts", time: 50
 VideoClue.create question_id: 5, youtube_id: "CqOlpQ7sepE", time: 145
 VideoClue.create question_id: 6, youtube_id: "fRgMCtaWoSU", time: 106
 VideoClue.create question_id: 7, youtube_id: "W3aCAMRjuBM", time: 153
@@ -140,7 +140,7 @@ VideoClue.create question_id: 8, youtube_id: "oxCDAs3kbAU", time: 65
 VideoClue.create question_id: 9, youtube_id:  "rY0WxgSXdEE", time: 85
 VideoClue.create question_id: 10, youtube_id: "-gzg3UqaBEU", time: 120
 VideoClue.create question_id: 11, youtube_id: "YQL-B3PNkeI", time: 69
-VideoClue.create question_id: 12, youtube_id: "yNSWJ-RtqEc", time: 17
+VideoClue.create question_id: 12, youtube_id: "W9RS5RwyN-Q", time: 211
 VideoClue.create question_id: 13, youtube_id: "ayCPd_0Y8e0", time: 318 
 VideoClue.create question_id: 14, youtube_id: "iO2SirSH7Rg", time: 12
 VideoClue.create question_id: 15, youtube_id: "oAb2_-uv41Y", time: 47

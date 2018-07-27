@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<style>
+li {
+	list-style: none;
+	color: #777777;
+}
+
+.nav ul{
+	position: fixed;
+	top: 30px;
+	right: 30px;
+ }
+
+ .nav h3 li a{
+ 	color: #777777;
+ 	
+ }
+
+
+.nav h3 li a:hover{
+ 	color: #cd201f;
+ 	text-decoration: none;
+ 	-webkit-transition: color 0.5s linear;
+	-moz-transition: color 0.5s linear;
+	-ms-transition: color 0.5s linear;
+	-o-transition: color 0.5s linear;
+	transition: color 0.5s linear;
+
+ }
+
+
+
+
+
+
+</style>
+<head>
+  <title>NameThatTube</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'youtube_icon.ico' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<div class='header'>
+<div class='container'>
+
+<div class='nav'>
+<% if current_player %>
+<ul>
+<h3 class='user-name'><li><%= current_player.user_name %></li></h3>
+<h3 class='log-out'><li><%= link_to 'Log out', logout_path, method: 'delete' %></a></li></h3>
+<h3 class='score'><li><%= current_player.score %></li></h3>
+</ul>
+<% end %>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

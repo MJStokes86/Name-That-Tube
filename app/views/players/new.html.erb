@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+	background-color: #fff;
+
+}
+
+label {
+	color: #777777;
+}
+
+h2 {
+	color: #777777;
+	font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+	color: red;
+}
+
+
+.btn {
+	background-color: #cd201f;
+	border-radius: 0;
+	color: #fff;
+	-webkit-transition: background 0.5s linear;
+	-moz-transition: background 0.5s linear;
+	-ms-transition: background 0.5s linear;
+	-o-transition: background 0.5s linear;
+	transition: background 0.5s linear;
+}
+
+.btn:hover {
+	background-color: #777777;
+}
+
+@media only screen and (max-device-width: 480px) {
+
+	.logo {
+		height:100px;
+		width: 250px;
+	}
+	.sign-up{
+		font-size: 1em;
+	}
+
+	.container {
+		position:relative;
+		top:-5em;
+		height:100px;
+		width:200px;
+		
+	}
+}
+
+
+</style>
+
+	<title>NameThatTube</title>
+
+
+		 <link href='https://fonts.googleapis.com/css?family=Russo+One|Audiowide' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+<center>
+
+<img class='logo' src = 'http://i.imgur.com/ixo5AwI.png' height="200" width="500" />
+
+<h2 class='sign-up'>Sign up today and join the video challenge!</h2>
+<br>
+<br>
+
+<% if @player.errors.count > 0 %>
+
+<% @player.errors.full_messages.each do |msg| %>
+<h4><%= msg.upcase %></h4>
+<% end %>
+<% end %>
+
+<br>
+<br>
+<div class = 'container'>
+<%= form_tag '/signup', method: 'post', :class => 'form-inline' do  %>
+
+<div class = 'form-group'>
+<%= label_tag 'user_name', "Username"%><br>
+<%= text_field_tag :user_name,params[:user_name], class: 'form-control', autofocus: true %>
+</div>
+<br>
+<br>
+<div class = 'form-group'>
+<%=label_tag 'password', "Password" %><br>
+<%= password_field_tag :password, params[:password], class: 'form-control', autofocus: true %>
+</div>
+<br>
+<br>
+<div class='form-group'>
+<%=label_tag 'password_confirmation',"Retype Password" %><br>
+<%=password_field_tag :password_confirmation, params[:password_confirmation], class: 'form-control', autofocus: true%>
+</div>
+<br>
+<br>
+
+<%= submit_tag "Join!", class: 'btn btn-default btn-lg btn-submit' %>
+<%= link_to "Cancel" , '/login', class: 'btn btn-default btn-lg'%>
+
+<%end%>
+</div>
+
+
+</center>
+
+
+</body>
+</html>
+
+
+
+

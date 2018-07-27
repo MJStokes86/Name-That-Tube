@@ -1,0 +1,54 @@
+<style type="text/css">
+.log-out , .score{
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+
+  
+
+  .answer_container img {
+    height:100px;
+    width:250px;
+  }
+
+  .user-name {
+    position: relative;
+    bottom:-18em;
+    left: -200%;
+  }
+  
+}
+
+@media only screen and (max-device-width: 480px) {
+  
+
+
+ .user-name {
+  display: none;
+ }
+  }
+
+</style>
+
+<center class="answer_container">
+  <div class="row">
+    <img height="200" src="http://i.imgur.com/ixo5AwI.png" width="500"/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+  </div>
+</center>
+<center><h3><%= @question.question %></h3></center>
+<br>
+<br>
+<form action="<%= results_path(@question) %>" id="form" method="post">
+  <% @answers.each do |answer|  %>
+    <div class="form-group"></div>
+    <div class="radio"></div>
+    <input name="q_id" type="hidden" value="<%= @question.id %>"></input>
+    <input class="btn btn-default btn-block" name="answer" style="vertical-align: middle; margin:0px;" type="submit" value="<%= answer.text %>"></input>
+  <% end %>
+</form>

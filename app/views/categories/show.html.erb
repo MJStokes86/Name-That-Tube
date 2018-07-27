@@ -1,0 +1,78 @@
+<link href='https://fonts.googleapis.com/css?family=Russo+One|Audiowide' rel='stylesheet' type='text/css'>
+
+
+
+<style>
+  .log-out , .score{
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+
+  /*.category_show_container {
+    height:100px;
+    width:250px;
+
+  }*/
+
+  .category_show_container img {
+    height:100px;
+    width:250px;
+  }
+
+  /*.user-name, .log-out{
+    position: relative;
+    bottom:-18em;
+    left: -200%;
+  }*/
+  
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  
+
+
+ .user-name {
+  display: none;
+ }
+
+ .btn.btn-lg{
+  background-color: white;
+ }
+
+ 
+
+
+  }
+
+
+
+</style>
+
+<center class='category_show_container'>
+  <div class='row'></div>
+  <img height='200' src='http://i.imgur.com/ixo5AwI.png' width='500'>
+  <br>
+  <br>
+  <br>
+  <h1><%=@category.name %></h1>
+
+  <br>
+  <br>
+  <h3><%=@question.question %></h3>
+  <br>
+  <br>
+
+  <br>
+  <br>
+</center>
+
+<center>
+  <form action= "<%= clue_path(@question) %>">
+    <button class='btn btn-lg' id='idj-play-button'>
+      <i class='glyphicon glyphicon-play'></i>
+    </button>
+  </form>
+</center>
+

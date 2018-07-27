@@ -1,0 +1,76 @@
+<link href='https://fonts.googleapis.com/css?family=Russo+One|Audiowide' rel='stylesheet' type='text/css'>
+
+
+<style>
+  .category_container {
+  position: absolute;
+  top:0em;
+  left:34%;
+  color: white;
+  font-family: 'Russo-One', sans-serif;
+
+}
+
+.score {
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+
+  .category_container {
+    height:100px;
+    width:250px;
+
+  }
+
+  .category_container img {
+    height:100px;
+    width:250px;
+  }
+
+  .user-name, .log-out{
+    position: relative;
+    bottom:-18em;
+    left: -200%;
+  }
+  
+}
+
+@media only screen and (max-device-width: 480px) {
+  
+
+
+
+  .category_container img {
+    height:200px;
+    width:350px;
+  }
+
+  .user-name, .log-out{
+    position: relative;
+    bottom:-25em;
+    left: -340%;
+  }
+}
+
+
+
+
+</style>
+
+<center class="category_container">
+  <div class="row">
+    <img height="200" src="http://i.imgur.com/ixo5AwI.png" width="500"/>
+    <br/>
+    <br/>
+    <br/>
+    <h2 class="category">Categories</h2>
+    <br/>
+    <br/>
+    <% @categories.each do |category| %>
+      <h4>
+        <%= link_to category.name, category_path(category), class: "btn btn-default btn-block" %>
+      </h4>
+    <% end %>
+  </div>
+</center>
